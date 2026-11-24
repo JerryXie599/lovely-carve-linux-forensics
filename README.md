@@ -1,31 +1,31 @@
-# LovelyCarve Linux 深度取证分析插件
+# LovelyCarve Linux 取证分析插件（`org.lovelycarve.linuxinfo` v3.0.0）
 
-插件 ID：`org.lovelycarve.linuxforensics`（LPP v2，`v1.1.0`）
+插件 ID：`org.lovelycarve.linuxinfo`（LPP v2，`v3.0.0`）
 
 > 本仓库仅提供面向 **LovelyCarve** 的 Release `.lcpkg` 二进制插件包发布与使用说明，不包含源码。
 
 ## 下载与安装
 
-请前往本仓库 **[Releases](../../releases)** 页面下载最新版本的 `org.lovelycarve.linuxforensics-1.1.0-windows-x64.lcpkg`（[`v1.1.0`](../../releases/tag/v1.1.0)）。
+请前往本仓库 **[Releases](../../releases)** 页面下载最新版本的 `org.lovelycarve.linuxinfo-3.0.0-windows-x64.lcpkg`（[`v3.0.0`](../../releases/tag/v3.0.0)）。
 
-> 本插件使用标准 LPP v2 协议（无魔改专属扩展，`schema_hash: fnv1a64:2252868a0ed773c8`），**官方主项目 [LovelyTeams/LovelyCarve](https://github.com/LovelyTeams/LovelyCarve) 与二开版 [JerryXie599/LovelyCarve-Mod](https://github.com/JerryXie599/LovelyCarve-Mod) 通用**。
+> - **官方与二开通用**：本插件基于标准 LPP v2 协议（无魔改专属扩展，`schema_hash: fnv1a64:44dd26f6c7d59917`），**官方主项目 [LovelyTeams/LovelyCarve](https://github.com/LovelyTeams/LovelyCarve) 与二开版 [JerryXie599/LovelyCarve-Mod](https://github.com/JerryXie599/LovelyCarve-Mod) 通用**。
+> - **自动替代内置插件、无重复结果**：本插件使用标准 ID `org.lovelycarve.linuxinfo`（`v3.0.0`），安装后直接覆盖升级自带基础 Linux 插件，避免同时跑出两份重复结果。
+> - **旧版迁移提示**：如你此前安装过旧 ID `org.lovelycarve.linuxforensics`（`v1.0.0` / `v1.1.0`），请先卸载它（`lovelycarve-cli plugin rm org.lovelycarve.linuxforensics` 或在插件页卸载），仅保留 `org.lovelycarve.linuxinfo` `v3.0.0` 即可。
 
 ### 安装方式
 - **图形界面**：打开 LovelyCarve → **「设置 → 插件 → 安装 .lcpkg」**，选择下载的 `.lcpkg` 文件。
 - **命令行**：
   ```bash
-  lovelycarve-cli plugin install org.lovelycarve.linuxforensics-1.1.0-windows-x64.lcpkg
+  lovelycarve-cli plugin install org.lovelycarve.linuxinfo-3.0.0-windows-x64.lcpkg
   ```
 
 ---
-
-# Linux Deep Analysis (`org.lovelycarve.linuxforensics`)
 
 LovelyCarve LPP v2 综合 Linux 深度取证插件，面向桌面系统、嵌入式设备（如树莓派）、企业 Web/容器/数据库服务器及 NAS 存储检材提供一站式深度解析与时间线重建。
 
 ## 支持的分析作用域
 
-- **`linux_deep` (`system` 视图)**：针对已挂载识别的 Linux 系统自动执行 15 大取证维度的深度分析，并提供 `timezone`、`hostname`、`users` 画像事实。
+- **`linuxbaseinfo` (`system` 视图)**：针对已挂载识别的 Linux 系统自动执行 15 大取证维度的深度分析，并提供 `timezone`、`hostname`、`users` 画像事实。
 - **`linux_evidence` (`evidence` 视图)**：全盘扫描所有卷中的 Linux 根目录、WSL2 子系统、NAS 数据卷、运维面板、数据库集群及抓包归档。
 - **`linux_files` (`files` 视图)**：支持右键单文件/多文件直接解析（`wtmp`/`btmp`/`lastlog`/`wtmp.db`、`.journal`、`.gz` 轮转日志、`nginx.conf`/`access.log`、`default.db`/`1Panel.db`、`dump.rdb`、`openclaw.json`、`.pem`/`.crt` 证书及 `.pcap`/`.pcapng`）。
 
