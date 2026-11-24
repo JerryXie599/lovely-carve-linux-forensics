@@ -4,14 +4,11 @@
 
 > 本仓库仅提供面向 **LovelyCarve** 的 Release `.lcpkg` 二进制插件包发布与使用说明，不包含源码。
 
-## 下载与安装（双版本对照）
+## 下载与安装
 
-请根据你使用的 LovelyCarve 主程序版本，前往 **[Releases](../../releases)** 下载对应的 `.lcpkg` 包：
+请前往本仓库 **[Releases](../../releases)** 页面下载最新版本的 `org.lovelycarve.linuxforensics-1.1.0-windows-x64.lcpkg`（[`v1.1.0`](../../releases/tag/v1.1.0)）。
 
-| 适用主程序 | Release 版本 | 下载文件名 | 说明 |
-| --- | --- | --- | --- |
-| **官方主项目** ([LovelyTeams/LovelyCarve](https://github.com/LovelyTeams/LovelyCarve)) | [`v1.1.0`](../../releases/tag/v1.1.0) | `org.lovelycarve.linuxforensics-1.1.0-windows-x64.lcpkg` | 标准 LPP v2 协议，无魔改扩展（`schema_hash: fnv1a64:2252868a0ed773c8`） |
-| **二开增强版** ([JerryXie599/LovelyCarve-Mod](https://github.com/JerryXie599/LovelyCarve-Mod)) | [`v1.1.0-mod`](../../releases/tag/v1.1.0-mod) | `org.lovelycarve.linuxforensics-1.1.0-mod-windows-x64.lcpkg` | 完整适配二开版快速分析内联子项勾选与结构化预览体验 |
+> 本插件使用标准 LPP v2 协议（无魔改专属扩展，`schema_hash: fnv1a64:2252868a0ed773c8`），**官方主项目 [LovelyTeams/LovelyCarve](https://github.com/LovelyTeams/LovelyCarve) 与二开版 [JerryXie599/LovelyCarve-Mod](https://github.com/JerryXie599/LovelyCarve-Mod) 通用**。
 
 ### 安装方式
 - **图形界面**：打开 LovelyCarve → **「设置 → 插件 → 安装 .lcpkg」**，选择下载的 `.lcpkg` 文件。
